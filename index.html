@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <title>HOTEL BOBINA</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">Hotel Bobina</a>
+        <div class="menu-btn"></div>
+        <div class="nav-bar">
+            <div class="nav-items">
+                <a href="home.html">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Explore</a>
+                <a href="#">Booking</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </header>
+    <section class="home">
+        <video class="video-slide active" src="videos/slider_1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="videos/slider_2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="videos/slider_3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="videos/slider_1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="videos/slider_1.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1>wonderful. <br><span>hotel</span></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima consequatur aliquam voluptatum itaque. Modi, beatae amet? Dolorem nam, porro voluptatem iusto cum itaque et consequuntur odit culpa saepe. Libero iusto rem error aut rerum dicta voluptas dolore id mollitia voluptatum esse sequi, inventore quas sint tempore ipsum fugit nisi ipsa?</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>ELEGENT & LUXURIOUS<br><span>ROOMS</span></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima consequatur aliquam voluptatum itaque. Modi, beatae amet? Dolorem nam, porro voluptatem iusto cum itaque et consequuntur odit culpa saepe. Libero iusto rem error aut rerum dicta voluptas dolore id mollitia voluptatum esse sequi, inventore quas sint tempore ipsum fugit nisi ipsa?</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>wful. <br><span>Bobina</span></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima consequatur aliquam voluptatum itaque. Modi, beatae amet? Dolorem nam, porro voluptatem iusto cum itaque et consequuntur odit culpa saepe. Libero iusto rem error aut rerum dicta voluptas dolore id mollitia voluptatum esse sequi, inventore quas sint tempore ipsum fugit nisi ipsa?</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>woder <br><span>el-hotel</span></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima consequatur aliquam voluptatum itaque. Modi, beatae amet? Dolorem nam, porro voluptatem iusto cum itaque et consequuntur odit culpa saepe. Libero iusto rem error aut rerum dicta voluptas dolore id mollitia voluptatum esse sequi, inventore quas sint tempore ipsum fugit nisi ipsa?</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>function<br><span>& party</span></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima consequatur aliquam voluptatum itaque. Modi, beatae amet? Dolorem nam, porro voluptatem iusto cum itaque et consequuntur odit culpa saepe. Libero iusto rem error aut rerum dicta voluptas dolore id mollitia voluptatum esse sequi, inventore quas sint tempore ipsum fugit nisi ipsa?</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="media-icon">
+            <a href="https://www.facebook.com/hotelbobina"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        // java script for resoposive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".nav-bar");
+
+    menuBtn.addEventListener("click", ()=> {
+
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+
+    });
+
+    // java script for video slider navigation
+
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+        btns.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+
+        contents.forEach((content) => {
+            content.classList.remove("active");
+        });
+
+
+    btns[manual].classList.add("active");
+    slides[manual].classList.add("active");
+    contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            sliderNav(i);
+        });
+    });
+    </script>
+</body>
+</html>
