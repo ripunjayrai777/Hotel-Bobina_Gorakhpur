@@ -22,9 +22,30 @@
                 <a href="booking.html">Booking</a>
                 <a href="gallery.html">Gallery</a>
                 <a href="contact.html">Contact Us</a>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#loginModal">Login/Register
+                </button>
             </div>
         </div>
     </header>
+    <!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-warning">Save changes</button>
+        </div>
+    </div>
+    </div>
+</div>
     <section class="home">
         <video class="video-slide active" src="videos/slider_1.mp4" autoplay muted loop></video>
         <video class="video-slide" src="videos/slider_2.mp4" autoplay muted loop></video>
